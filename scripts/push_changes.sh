@@ -5,7 +5,6 @@ echo "Finding differences between this repo and chef server"
 updates=`knife diff --name-only --name-status --repo-mode static`
 
 if [ ! -z "$updates" ]; then
-  echo $updates
   while read -r line; do
     action=`echo $line | awk {'print $1'}`
     file=`echo $line | awk {'print $2'}`
@@ -15,7 +14,8 @@ if [ ! -z "$updates" ]; then
     extension="${filename##*.}"
     object="${filename%.*}"
     case $type in
-      environment|node|role)
+      # only envs and roles
+      environment|role)
         case $action in
          A)
           echo "adding new ${type}: ${object}"
