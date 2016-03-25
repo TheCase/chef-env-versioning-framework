@@ -8,8 +8,7 @@ This framework uses Github and Travis to version your environments, roles and no
 
 Usage:
 
-- fork this repo
-- clone your fork
+- duplicate this repo (https://help.github.com/articles/duplicating-a-repository/)
 - add your chef validation and client keys to the .chef directory
 - edit the .chef/knife.rb as necessary
 
