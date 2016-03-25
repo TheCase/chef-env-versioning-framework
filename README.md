@@ -3,6 +3,9 @@ Chef Environment Versioning Framework
 
 This framework uses Github and Travis to version your environments, roles and nodes - and automatically updates your chef server with the changes (if your server is accessible from the internet).
 
+\* **Not recommended for public repos due to chef server key exposure - use on private repos only!**
+
+
 Usage:
 
 - fork this repo
